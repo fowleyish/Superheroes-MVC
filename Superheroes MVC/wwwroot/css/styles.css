@@ -1,0 +1,9 @@
+﻿#cardSection {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.card {
+    margin-bottom: 2vw;
+}

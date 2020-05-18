@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Superheroes_MVC.Data;
 using Superheroes_MVC.Models;
 
 namespace Superheroes_MVC.Controllers
@@ -12,6 +13,7 @@ namespace Superheroes_MVC.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+
 
         public HomeController(ILogger<HomeController> logger)
         {

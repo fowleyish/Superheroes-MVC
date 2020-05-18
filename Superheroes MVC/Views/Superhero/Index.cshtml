@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Superheroes_MVC.Models.Superhero>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div id="cardSection">
+    @foreach (var item in Model) {
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(x => item.Name)</h5>
+                <p class="card-text">"@Html.DisplayFor(x => item.CatchPhrase)"</p>
+                <a href="#" class="btn btn-primary">View bio</a>
+            </div>
+        </div>
+    }
+</div>

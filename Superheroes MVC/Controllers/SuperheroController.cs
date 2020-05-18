@@ -10,7 +10,7 @@ namespace Superheroes_MVC.Controllers
 {
     public class SuperheroController : Controller
     {
-        private ApplicationDbContext _context { get; }
+        private ApplicationDbContext _context;
 
         public SuperheroController(ApplicationDbContext context)
         {
@@ -20,7 +20,8 @@ namespace Superheroes_MVC.Controllers
         // GET: Superhero
         public ActionResult Index()
         {
-            return View();
+            var heroes = _context.Superheroes;
+            return View(heroes);
         }
 
         // GET: Superhero/Details/5
