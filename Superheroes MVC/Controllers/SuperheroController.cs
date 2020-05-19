@@ -60,18 +60,25 @@ namespace Superheroes_MVC.Controllers
         // GET: Superhero/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var heroToEdit =_context.Superheroes.Where(x => x.Id == id).SingleOrDefault();
+            return View(heroToEdit);
         }
 
         // POST: Superhero/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Superhero hero)
         {
             try
             {
                 // TODO: Add update logic here
-
+                Superhero thisHero = _context.Superheroes.Where(x => x.Id == hero.Id).SingleOrDefault();
+                thisHero.Name = hero.Name;
+                thisHero.Ego = hero.Ego;
+                thisHero.PrimaryAbility = hero.PrimaryAbility;
+                thisHero.SecondaryAbility = hero.SecondaryAbility;
+                thisHero.CatchPhrase = hero.CatchPhrase;
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch
