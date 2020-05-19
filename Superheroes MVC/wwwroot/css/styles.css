@@ -7,3 +7,64 @@
 .card {
     margin-bottom: 2vw;
 }
+
+#bannerImg {
+    width: 100%;
+    padding-bottom: 2vw;
+}
+
+body {
+    background-color: #25252b;
+}
+
+.container.mainBody {
+    background-color: #626161;
+}
+
+.container {
+    padding: 0;
+}
+
+#hiddenTitle {
+    display: none;
+}
+
+.card-body {
+    background-color: #e8e8e8;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-flow: column;
+}
+
+.pb-3 {
+    padding: 10px;
+}
+
+.card-body.createCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bi.bi-plus-circle-fill {
+    font-size: 5rem;
+    color: #ffb300;
+}
+
+.btn.btn-primary {
+    background-color: #ffb300;
+}
+
+.btn-primary {
+    border-color: #ffb300;
+}
+
+.btn-primary:hover {
+    border-color: #ccac00;
+}
+
+.navbar.navbar-expand-sm.navbar-toggleable-sm.navbar-light.bg-white.border-bottom.box-shadow.mb-3 {
+    background-color: #ffb300 !important;
+    border-bottom: #ccac00 !important;
+}
